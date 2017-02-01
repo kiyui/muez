@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher;
+package com.timurkiyivinski.muez;
 
 import android.app.Activity;
 import android.content.Context;
@@ -21,7 +21,7 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
-import com.hayaisoftware.launcher.threading.SimpleTaskConsumerManager;
+import com.timurkiyivinski.muez.threading.SimpleTaskConsumerManager;
 
 
 public class ImageLoadingTask extends SimpleTaskConsumerManager.Task {

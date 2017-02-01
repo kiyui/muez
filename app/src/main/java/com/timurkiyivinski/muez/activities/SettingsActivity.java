@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher.activities;
+package com.timurkiyivinski.muez.activities;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -24,8 +24,8 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.view.Menu;
 
-import com.hayaisoftware.launcher.R;
-import com.hayaisoftware.launcher.ShortcutNotificationManager;
+import com.timurkiyivinski.muez.R;
+import com.timurkiyivinski.muez.ShortcutNotificationManager;
 
 public class SettingsActivity extends PreferenceActivity implements
 		OnSharedPreferenceChangeListener {

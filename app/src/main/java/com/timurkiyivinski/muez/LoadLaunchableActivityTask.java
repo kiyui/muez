@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher;
+package com.timurkiyivinski.muez;
 
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
-import com.hayaisoftware.launcher.threading.SimpleTaskConsumerManager;
+import com.timurkiyivinski.muez.threading.SimpleTaskConsumerManager;
 
 import java.util.ArrayList;
 

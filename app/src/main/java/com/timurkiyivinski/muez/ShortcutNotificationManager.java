@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher;
+package com.timurkiyivinski.muez;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -22,7 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-import com.hayaisoftware.launcher.activities.SearchActivity;
+import com.timurkiyivinski.muez.activities.SearchActivity;
 
 public class ShortcutNotificationManager {
 	private static final int NOTIFICATION_ID = 0;

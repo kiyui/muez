@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher;
+package com.timurkiyivinski.muez;
 
 import android.content.Context;
 import android.database.Cursor;

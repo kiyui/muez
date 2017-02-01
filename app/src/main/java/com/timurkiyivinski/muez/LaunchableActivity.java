@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher;
+package com.timurkiyivinski.muez;
 
 import android.app.ActivityManager;
 import android.content.ComponentName;
@@ -26,7 +26,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
-import com.hayaisoftware.launcher.util.ContentShare;
+import com.timurkiyivinski.muez.util.ContentShare;
 
 
 public class LaunchableActivity{

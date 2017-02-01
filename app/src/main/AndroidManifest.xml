@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="com.hayaisoftware.launcher"
+    package="com.timurkiyivinski.muez"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-sdk
@@ -16,7 +16,7 @@
         android:theme="@style/AppBaseTheme" >
 
         <activity
-            android:name="com.hayaisoftware.launcher.activities.SearchActivity"
+            android:name="com.timurkiyivinski.muez.activities.SearchActivity"
             android:alwaysRetainTaskState="true"
             android:label="@string/title_activity_search"
             android:launchMode="singleTask"
@@ -38,12 +38,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hayaisoftware.launcher.activities.SettingsActivity"
+            android:name="com.timurkiyivinski.muez.activities.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppSettingsTheme" >
         </activity>
         <activity
-            android:name="com.hayaisoftware.launcher.activities.AboutActivity"
+            android:name="com.timurkiyivinski.muez.activities.AboutActivity"
             android:theme="@style/AppSettingsTheme"
             android:label="@string/title_activity_about" >
         </activity>

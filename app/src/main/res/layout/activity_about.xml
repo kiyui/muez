@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:scrollbars="vertical"
-    tools:context="com.hayaisoftware.launcher.activities.AboutActivity">
+    tools:context="com.timurkiyivinski.muez.activities.AboutActivity">
     <ScrollView
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"

@@ -1,4 +1,4 @@
-package com.hayaisoftware.launcher.util;
+package com.timurkiyivinski.muez.util;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;

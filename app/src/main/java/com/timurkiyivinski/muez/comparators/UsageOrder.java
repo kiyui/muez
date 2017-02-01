@@ -13,11 +13,9 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher.comparators;
+package com.timurkiyivinski.muez.comparators;
 
-import android.util.Log;
-
-import com.hayaisoftware.launcher.LaunchableActivity;
+import com.timurkiyivinski.muez.LaunchableActivity;
 
 import java.util.Comparator;
 

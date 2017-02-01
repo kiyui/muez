@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher.activities;
+package com.timurkiyivinski.muez.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -21,8 +21,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.hayaisoftware.launcher.BuildConfig;
-import com.hayaisoftware.launcher.R;
+import com.timurkiyivinski.muez.BuildConfig;
+import com.timurkiyivinski.muez.R;
 
 public class AboutActivity extends Activity {
 

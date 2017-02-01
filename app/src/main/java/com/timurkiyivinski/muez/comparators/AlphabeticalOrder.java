@@ -13,16 +13,16 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher.comparators;
+package com.timurkiyivinski.muez.comparators;
 
-import com.hayaisoftware.launcher.LaunchableActivity;
+import com.timurkiyivinski.muez.LaunchableActivity;
 
 import java.util.Comparator;
 
-public class PinToTop implements Comparator<LaunchableActivity>{
 
+public class AlphabeticalOrder implements Comparator<LaunchableActivity> {
     @Override
     public int compare(LaunchableActivity lhs, LaunchableActivity rhs) {
-        return rhs.getPriority()-lhs.getPriority();
+        return lhs.getActivityLabel().compareToIgnoreCase(rhs.getActivityLabel());
     }
 }

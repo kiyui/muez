@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher.activities;
+package com.timurkiyivinski.muez.activities;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -58,21 +58,21 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hayaisoftware.launcher.ImageLoadingTask;
-import com.hayaisoftware.launcher.LaunchableActivity;
-import com.hayaisoftware.launcher.LaunchableActivityPrefs;
-import com.hayaisoftware.launcher.LoadLaunchableActivityTask;
-import com.hayaisoftware.launcher.PackageChangedReceiver;
-import com.hayaisoftware.launcher.R;
-import com.hayaisoftware.launcher.ShortcutNotificationManager;
-import com.hayaisoftware.launcher.StatusBarColorHelper;
-import com.hayaisoftware.launcher.Trie;
-import com.hayaisoftware.launcher.comparators.AlphabeticalOrder;
-import com.hayaisoftware.launcher.comparators.PinToTop;
-import com.hayaisoftware.launcher.comparators.RecentOrder;
-import com.hayaisoftware.launcher.comparators.UsageOrder;
-import com.hayaisoftware.launcher.threading.SimpleTaskConsumerManager;
-import com.hayaisoftware.launcher.util.ContentShare;
+import com.timurkiyivinski.muez.ImageLoadingTask;
+import com.timurkiyivinski.muez.LaunchableActivity;
+import com.timurkiyivinski.muez.LaunchableActivityPrefs;
+import com.timurkiyivinski.muez.LoadLaunchableActivityTask;
+import com.timurkiyivinski.muez.PackageChangedReceiver;
+import com.timurkiyivinski.muez.R;
+import com.timurkiyivinski.muez.ShortcutNotificationManager;
+import com.timurkiyivinski.muez.StatusBarColorHelper;
+import com.timurkiyivinski.muez.Trie;
+import com.timurkiyivinski.muez.comparators.AlphabeticalOrder;
+import com.timurkiyivinski.muez.comparators.PinToTop;
+import com.timurkiyivinski.muez.comparators.RecentOrder;
+import com.timurkiyivinski.muez.comparators.UsageOrder;
+import com.timurkiyivinski.muez.threading.SimpleTaskConsumerManager;
+import com.timurkiyivinski.muez.util.ContentShare;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -112,10 +112,12 @@ public class SearchActivity extends Activity
     private int mNumOfCores;
     private BroadcastReceiver mPackageChangedReceiver;
 
+    // TODO: Review using https://github.com/Andre1299/CompareString for comparator classes
     private Comparator<LaunchableActivity> mPinToTopComparator;
     private Comparator<LaunchableActivity> mRecentOrderComparator;
     private Comparator<LaunchableActivity> mAlphabeticalOrderComparator;
     private Comparator<LaunchableActivity> mUsageOrderComparator;
+
     private InputMethodManager mInputMethodManager;
     private AdapterView mAppListView;
     private PackageManager mPm;
@@ -306,6 +308,8 @@ public class SearchActivity extends Activity
 
         mSearchEditText.addTextChangedListener(mTextWatcher);
         mSearchEditText.setImeActionLabel(getString(R.string.launch), EditorInfo.IME_ACTION_GO);
+
+        // TODO: Implement interface for both listeners
         mSearchEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -327,6 +331,9 @@ public class SearchActivity extends Activity
                 return false;
             }
         });
+
+        // TODO: mAppListView search ability
+
         registerForContextMenu(mAppListView);
 
         ((GridView) mAppListView).setOnScrollListener(new AbsListView.OnScrollListener() {

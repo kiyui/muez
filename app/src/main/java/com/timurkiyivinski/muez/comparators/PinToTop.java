@@ -13,24 +13,16 @@
  * limitations under the License.
  */
 
-package com.hayaisoftware.launcher.comparators;
+package com.timurkiyivinski.muez.comparators;
 
-import com.hayaisoftware.launcher.LaunchableActivity;
+import com.timurkiyivinski.muez.LaunchableActivity;
 
 import java.util.Comparator;
 
-
-public class RecentOrder implements Comparator<LaunchableActivity>{
+public class PinToTop implements Comparator<LaunchableActivity>{
 
     @Override
     public int compare(LaunchableActivity lhs, LaunchableActivity rhs) {
-        long lhsLaunchTime=lhs.getLaunchTime();
-        long rhsLaunchTime = rhs.getLaunchTime();
-
-        if (lhsLaunchTime > rhsLaunchTime)
-            return -1;
-        if (lhsLaunchTime < rhsLaunchTime)
-            return 1;
-        return 0;
+        return rhs.getPriority()-lhs.getPriority();
     }
 }
