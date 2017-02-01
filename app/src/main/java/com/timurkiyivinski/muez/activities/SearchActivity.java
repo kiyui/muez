@@ -1,4 +1,4 @@
-/* Copyright 2015 Hayai Software
+/* Copyright 2017 Timur Kiyivinski & 2015 Hayai Software
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -647,7 +647,7 @@ public class SearchActivity extends Activity
         if (mImageLoadingConsumersManager != null)
             mImageLoadingConsumersManager.destroyAllConsumers(false);
         unregisterReceiver(mPackageChangedReceiver);
-        Log.d("HayaiLauncher", "Hayai is ded");
+        Log.d("TimurLauncher", "Timur is ded");
         super.onDestroy();
     }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--
-    Copyright 2015  Nicola Spanti (RyDroid) <translations@nicola-spanti.info>
+    Copyright 2017  Nicola Spanti (RyDroid) <translations@nicola-spanti.info>
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -33,10 +33,10 @@
     <string name="action_refresh_app_list">Rafraîchir la liste des apps</string>
     <string name="activity_not_found">Activité non trouvée.</string>
     <string name="action_about">À propos</string>
-    <!--<string name="about_content">Hayai Launcher [APP_VERSION]
+    <!--<string name="about_content">Timur Launcher [APP_VERSION]
 \n
 \nSite web du projet:
-\nhttps://github.com/seizonsenryaku/HayaiLauncher
+\nhttps://github.com/seizonsenryaku/TimurLauncher
 \n
 \nContributeurs :
 \n\tEdgar Villani Peres (seizonsenryaku)
@@ -44,7 +44,7 @@
 \n
 \n-
 \n
-\n Copyright 2015 Hayai Software
+\n Copyright 2017 Timur Kiyivinski & 2015 Hayai Software
 \n
 \n Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

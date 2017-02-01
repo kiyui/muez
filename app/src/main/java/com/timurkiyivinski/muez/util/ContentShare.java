@@ -7,7 +7,7 @@ import android.content.pm.ResolveInfo;
 import java.util.List;
 
 /**
- * Created by Administrador on 18/08/2015.
+ * Created by Administrador on 18/08/2017.
  */
 public class ContentShare {
 

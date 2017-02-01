@@ -16,10 +16,10 @@
     <string name="action_about">Sobre</string>
     <string name="action_system_settings">Ajustes do dispositivo</string>
     <string name="activity_not_found">Atividade não encontrada.</string>
-    <string name="title_activity_about">Sobre</string><string name="about_content">Hayai Launcher [APP_VERSION]
+    <string name="title_activity_about">Sobre</string><string name="about_content">Timur Launcher [APP_VERSION]
 \n
 \nWebsite do projeto:
-\nhttps://github.com/seizonsenryaku/HayaiLauncher
+\nhttps://github.com/seizonsenryaku/TimurLauncher
 \n
 \nContribuidores:
 \n\tEdgar Villani Peres (seizonsenryaku)
@@ -27,7 +27,7 @@
 \n
 \n-
 \n
-\n Copyright 2015 Hayai Software
+\n Copyright 2017 Timur Kiyivinski & 2015 Hayai Software
 \n
 \n Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
