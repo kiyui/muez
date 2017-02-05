@@ -16,6 +16,7 @@
 package com.timurkiyivinski.muez.activities;
 
 import android.app.Activity;
+import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -369,11 +370,16 @@ public class SearchActivity extends Activity
     }
 
     private boolean openFirstActivity() {
-        if (!mActivityInfos.isEmpty()) {
+        if (mActivityInfos.isEmpty()) {
+            String query = mSearchEditText.getText().toString();
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            intent.putExtra(SearchManager.QUERY, query);
+            startActivity(intent);
+            return false;
+        } else {
             launchActivity(mActivityInfos.get(0));
             return true;
         }
-        return false;
     }
 
     private void setupPreferences() {
