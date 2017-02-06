@@ -2,7 +2,7 @@
 A lightweight search-oriented app drawer only Android Launcher.
 
 ## todo
-- [ ] Web Search
+- [x] Web Search
 - [ ] Alphabetical Scrolling
 - [ ] Pinned Items?
 - [ ] Folders?
