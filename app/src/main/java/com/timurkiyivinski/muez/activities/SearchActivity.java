@@ -133,7 +133,6 @@ public class SearchActivity extends Activity
     private boolean mShouldOrderByRecents;
     private boolean mShouldOrderByUsages;
     private final TextWatcher mTextWatcher = new TextWatcher() {
-
         @Override
         public void onTextChanged(CharSequence s, int start, int before,
                                   int count) {
@@ -141,18 +140,15 @@ public class SearchActivity extends Activity
             updateVisibleApps();
         }
 
-
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             //do nothing
         }
 
-
         @Override
         public void afterTextChanged(Editable s) {
             //do nothing
         }
-
 
     };
     private boolean mDisableIcons;
@@ -212,12 +208,10 @@ public class SearchActivity extends Activity
                 android.R.mipmap.sym_def_app_icon);
         mIconSizePixels = resources.getDimensionPixelSize(R.dimen.app_icon_size);
 
-
         mPinToTopComparator = new PinToTop();
         mRecentOrderComparator = new RecentOrder();
         mAlphabeticalOrderComparator = new AlphabeticalOrder();
         mUsageOrderComparator = new UsageOrder();
-
 
         mNumOfCores = Runtime.getRuntime().availableProcessors();
 
@@ -301,8 +295,6 @@ public class SearchActivity extends Activity
         } else {
             hideKeyboard();
         }
-
-
     }
 
     private void setupViews() {
@@ -310,7 +302,6 @@ public class SearchActivity extends Activity
         mSearchEditText.addTextChangedListener(mTextWatcher);
         mSearchEditText.setImeActionLabel(getString(R.string.launch), EditorInfo.IME_ACTION_GO);
 
-        // TODO: Implement interface for both listeners
         mSearchEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -348,12 +339,10 @@ public class SearchActivity extends Activity
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem,
                                  int visibleItemCount, int totalItemCount) {
-
             }
         });
         //noinspection unchecked
         mAppListView.setAdapter(mArrayAdapter);
-
 
         mAppListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -363,10 +352,7 @@ public class SearchActivity extends Activity
                     launchActivity(mActivityInfos.get(position - mColumnCount));
                 }
             }
-
         });
-
-
     }
 
     private boolean openFirstActivity() {
@@ -403,7 +389,6 @@ public class SearchActivity extends Activity
     }
 
     private void setupImageLoadingThreads(final Resources resources) {
-
         mImageLoadingConsumersManager =
                 new SimpleTaskConsumerManager(getOptimalNumberOfThreads(resources),
                         mActivityInfos.size());
@@ -421,7 +406,6 @@ public class SearchActivity extends Activity
     }
 
     private void updateApps(final List<LaunchableActivity> updatedActivityInfos, boolean addToTrie) {
-
         for (LaunchableActivity launchableActivity : updatedActivityInfos) {
             final String packageName = launchableActivity.getComponent().getPackageName();
             mLaunchableActivityPackageNameHashMap.remove(packageName);
@@ -561,7 +545,6 @@ public class SearchActivity extends Activity
     }
 
     private void loadLaunchableApps() {
-
         List<ResolveInfo> infoList = ContentShare.getLaunchableResolveInfos(mPm);
         mArrayAdapter = new ActivityInfoArrayAdapter(this,
                 R.layout.app_grid_item, mActivityInfos);
@@ -622,7 +605,6 @@ public class SearchActivity extends Activity
             // is being installed
             removeActivitiesFromPackage(packageName);
 
-
             if (infoList.isEmpty()) {
                 Log.d("SearchActivity", "No activities in list. Uninstall detected!");
                 updateVisibleApps();
@@ -636,10 +618,7 @@ public class SearchActivity extends Activity
                 }
                 updateApps(launchablesFromResolve, true);
             }
-
         }
-
-
     }
 
     @Override
@@ -683,8 +662,6 @@ public class SearchActivity extends Activity
         } else if (key.equals("pref_autokeyboard")) {
             mAutoKeyboard = mSharedPreferences.getBoolean("pref_autokeyboard", false);
         }
-
-
     }
 
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -700,7 +677,6 @@ public class SearchActivity extends Activity
         super.onTrimMemory(level);
         if (!mIsCacheClear && level == TRIM_MEMORY_COMPLETE)
             clearCaches();
-
     }
 
     private void clearCaches() {
@@ -794,17 +770,13 @@ public class SearchActivity extends Activity
             default:
                 return false;
         }
-
     }
 
     public void onClickSettingsButton(View view) {
         showPopup(mOverflowButtonTopleft);
-
-
     }
 
     public void launchActivity(final LaunchableActivity launchableActivity) {
-
         hideKeyboard();
         try {
             startActivity(launchableActivity.getLaunchIntent(mSearchEditText.getText().toString()));
@@ -820,8 +792,6 @@ public class SearchActivity extends Activity
             Toast.makeText(mContext, getString(R.string.activity_not_found),
                     Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     public void onClickClearButton(View view) {
@@ -837,10 +807,8 @@ public class SearchActivity extends Activity
 
     class ActivityInfoArrayAdapter extends ArrayAdapter<LaunchableActivity> {
         final LayoutInflater inflater;
-
         public ActivityInfoArrayAdapter(final Context context, final int resource,
                                         final List<LaunchableActivity> activityInfos) {
-
             super(context, resource, activityInfos);
             inflater = getLayoutInflater();
         }
@@ -852,7 +820,6 @@ public class SearchActivity extends Activity
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-
             final View view =
                     convertView != null ?
                             convertView : inflater.inflate(R.layout.app_grid_item, parent, false);
@@ -895,7 +862,6 @@ public class SearchActivity extends Activity
                         launchableActivity.isShareable() ? View.VISIBLE : View.GONE);
                 appPinToTop.setVisibility(
                         launchableActivity.getPriority() > 0 ? View.VISIBLE : View.GONE);
-
             }
             return view;
         }
