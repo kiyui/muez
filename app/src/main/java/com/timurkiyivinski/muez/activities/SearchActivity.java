@@ -298,7 +298,6 @@ public class SearchActivity extends Activity
     }
 
     private void setupViews() {
-
         mSearchEditText.addTextChangedListener(mTextWatcher);
         mSearchEditText.setImeActionLabel(getString(R.string.launch), EditorInfo.IME_ACTION_GO);
 
@@ -325,7 +324,6 @@ public class SearchActivity extends Activity
         });
 
         // TODO: mAppListView search ability
-
         registerForContextMenu(mAppListView);
 
         ((GridView) mAppListView).setOnScrollListener(new AbsListView.OnScrollListener() {

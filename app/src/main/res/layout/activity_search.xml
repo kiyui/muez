@@ -22,12 +22,13 @@
         android:clipToPadding="false"
         android:columnWidth="@dimen/app_row_column_width"
         android:fadingEdge="none"
+        android:overScrollMode="always"
+        android:fadeScrollbars="true"
         android:gravity="center"
         android:horizontalSpacing="@dimen/app_row_horizontal_spacing"
         android:numColumns="@integer/app_grid_columns"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:scrollbars="none"
         android:stretchMode="columnWidth"
         android:verticalSpacing="@dimen/app_row_vertical_spacing" />
     </LinearLayout>
