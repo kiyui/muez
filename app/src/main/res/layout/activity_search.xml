@@ -4,33 +4,34 @@
     android:layout_height="match_parent"
     android:layout_margin="0dp"
     android:orientation="vertical"
-    android:padding="0dp"
-     >
-
+    android:padding="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/appsContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="0dp"
-        android:choiceMode="singleChoice"
-        android:clipToPadding="false"
-        android:columnWidth="@dimen/app_row_column_width"
-        android:fadingEdge="none"
-        android:overScrollMode="always"
-        android:fadeScrollbars="true"
-        android:gravity="center"
-        android:horizontalSpacing="@dimen/app_row_horizontal_spacing"
-        android:numColumns="@integer/app_grid_columns"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="@dimen/app_row_vertical_spacing" />
+        android:fastScrollStyle="@android:style/Widget.Material.FastScroll"
+        android:orientation="vertical">
+
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/appsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:choiceMode="singleChoice"
+            android:clipToPadding="false"
+            android:columnWidth="@dimen/app_row_column_width"
+            android:fadeScrollbars="true"
+            android:fadingEdge="none"
+            android:fastScrollAlwaysVisible="true"
+            android:fastScrollStyle="@android:style/Widget.Material.FastScroll"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/app_row_horizontal_spacing"
+            android:numColumns="@integer/app_grid_columns"
+            android:overScrollMode="always"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/app_row_vertical_spacing" />
     </LinearLayout>
 
     <LinearLayout
@@ -103,8 +104,6 @@
                 android:tint="@color/hint_grey"
                 android:visibility="gone" />
 
-
-
             <ImageButton
                 android:id="@+id/overflow_button"
                 android:layout_width="40dp"
@@ -115,14 +114,10 @@
                 android:src="@drawable/ic_more_vert_white_24dp"
                 android:tint="@color/hint_grey" />
         </LinearLayout>
+
         <View
             android:id="@+id/bottomFillerView"
             android:layout_width="match_parent"
             android:layout_height="0dp" />
     </LinearLayout>
-
-
-
-
-
 </RelativeLayout>

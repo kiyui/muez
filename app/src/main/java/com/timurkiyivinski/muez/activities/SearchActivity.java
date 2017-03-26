@@ -325,6 +325,7 @@ public class SearchActivity extends Activity
 
         // TODO: mAppListView search ability
         registerForContextMenu(mAppListView);
+        // ((GridView) mAppListView).setFastScrollAlwaysVisible(true);
 
         ((GridView) mAppListView).setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
