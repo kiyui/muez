@@ -5,7 +5,7 @@ A lightweight search-oriented app drawer only Android Launcher.
 - [x] Web Search
 - [x] Alphabetical Scrolling
 - [x] Pinned Items
-- [ ] Relicense
+- [x] Relicense
 
 ## fork information
 The project is built on top of [HayaiLauncher](https://github.com/seizonsenryaku/HayaiLauncher/) and aims to continue the apparently abandoned project.
