@@ -869,8 +869,14 @@ public class SearchActivity extends Activity
         @Override
         public Object[] getSections() {
             ArrayList<String> labels = new ArrayList<>();
+            String order = mSharedPreferences.getString("pref_app_preferred_order", "recent");
+            Log.d("ORDER", order);
             for (LaunchableActivity activity: mActivityInfos) {
-                labels.add(activity.getActivityLabel());
+                if (order.equals("alphabetical")) {
+                    labels.add(activity.getActivityLabel().substring(0, 1));
+                } else {
+                    labels.add(activity.getActivityLabel());
+                }
             }
 
             return labels.toArray();
