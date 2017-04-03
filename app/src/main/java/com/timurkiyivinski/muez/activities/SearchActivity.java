@@ -378,7 +378,7 @@ public class SearchActivity extends Activity
             final int priority = ShortcutNotificationManager.getPriorityFromString(strPriority);
             shortcutNotificationManager.showNotification(this, priority);
         }
-        String order = mSharedPreferences.getString("pref_app_preferred_order", "recent");
+        String order = mSharedPreferences.getString("pref_app_preferred_order", "alphabetical");
         mShouldOrderByUsages = order.equals("usage");
         mShouldOrderByRecents = order.equals("recent");
 
@@ -650,7 +650,7 @@ public class SearchActivity extends Activity
         if (key.equals("package_changed_name") && !sharedPreferences.getString(key, "").isEmpty()) {
             handlePackageChanged();
         } else if (key.equals("pref_app_preferred_order")) {
-            String order = mSharedPreferences.getString("pref_app_preferred_order", "recent");
+            String order = mSharedPreferences.getString("pref_app_preferred_order", "alphabetical");
             mShouldOrderByUsages = order.equals("usage");
             mShouldOrderByRecents = order.equals("recent");
 
@@ -869,13 +869,13 @@ public class SearchActivity extends Activity
         @Override
         public Object[] getSections() {
             ArrayList<String> labels = new ArrayList<>();
-            String order = mSharedPreferences.getString("pref_app_preferred_order", "recent");
-            Log.d("ORDER", order);
+            Boolean fastscrollNames = mSharedPreferences.getBoolean("pref_fastscrolllabel", false);
+
             for (LaunchableActivity activity: mActivityInfos) {
-                if (order.equals("alphabetical")) {
-                    labels.add(activity.getActivityLabel().substring(0, 1));
-                } else {
+                if (fastscrollNames) {
                     labels.add(activity.getActivityLabel());
+                } else {
+                    labels.add(activity.getActivityLabel().substring(0, 1));
                 }
             }
 

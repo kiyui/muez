@@ -53,6 +53,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     <string name="pref_basetheme" >Base Theme</string>
     <string name="pref_notification_priority">Notification priority</string>
     <string name="settings_autokeyboard">Open keyboard automatically</string>
+    <string name="settings_fastscrolllabel">Show application label in fast scroll</string>
     <string name="settings_category_general_category">General</string>
     <string name="pref_preferred_order_dialog">App order</string>
     <string name="pref_preferred_app_order_dialog">App order</string>

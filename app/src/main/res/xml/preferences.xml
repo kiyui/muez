@@ -7,8 +7,12 @@
             android:defaultValue="true"
             android:key="pref_autokeyboard"
             android:title="@string/settings_autokeyboard" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_fastscrolllabel"
+            android:title="@string/settings_fastscrolllabel" />
         <ListPreference
-            android:defaultValue="recent"
+            android:defaultValue="alphabetical"
             android:dialogTitle="@string/pref_preferred_app_order_dialog"
             android:entries="@array/pref_app_preferred_order_entries"
             android:entryValues="@array/pref_app_preferred_order_values"
