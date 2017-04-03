@@ -3,9 +3,8 @@ A lightweight search-oriented app drawer only Android Launcher.
 
 ## todo
 - [x] Web Search
-- [ ] Alphabetical Scrolling
-- [ ] Pinned Items?
-- [ ] Folders?
+- [x] Alphabetical Scrolling
+- [x] Pinned Items
 - [ ] Relicense
 
 ## fork information
