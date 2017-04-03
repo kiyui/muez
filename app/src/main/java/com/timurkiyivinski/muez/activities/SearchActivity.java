@@ -56,6 +56,7 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.SectionIndexer;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -804,7 +805,7 @@ public class SearchActivity extends Activity
         }
     }
 
-    class ActivityInfoArrayAdapter extends ArrayAdapter<LaunchableActivity> {
+    class ActivityInfoArrayAdapter extends ArrayAdapter<LaunchableActivity> implements SectionIndexer {
         final LayoutInflater inflater;
         public ActivityInfoArrayAdapter(final Context context, final int resource,
                                         final List<LaunchableActivity> activityInfos) {
@@ -865,6 +866,26 @@ public class SearchActivity extends Activity
             return view;
         }
 
+        @Override
+        public Object[] getSections() {
+            ArrayList<String> labels = new ArrayList<>();
+            for (LaunchableActivity activity: mActivityInfos) {
+                labels.add(activity.getActivityLabel());
+            }
+
+            return labels.toArray();
+        }
+
+        @Override
+        public int getPositionForSection(int i) {
+            return i;
+        }
+
+        @Override
+        public int getSectionForPosition(int i) {
+            // We do not need this
+            return 0;
+        }
     }
 
 }
