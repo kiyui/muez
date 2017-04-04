@@ -24,6 +24,7 @@
             android:fadingEdge="none"
             android:fastScrollAlwaysVisible="true"
             android:fastScrollStyle="@android:style/Widget.Material.FastScroll"
+            android:scrollbarStyle="outsideOverlay"
             android:gravity="center"
             android:horizontalSpacing="@dimen/app_row_horizontal_spacing"
             android:numColumns="@integer/app_grid_columns"
