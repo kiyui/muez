@@ -1,3 +1,6 @@
+# Deprecated
+Dropping support and development in favour of [MVEZ](https://github.com/TimurKiyivinski/MVEZ) :wink:
+
 # MUEZ
 A lightweight search-oriented app drawer only Android Launcher.
 
